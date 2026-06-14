@@ -1,42 +1,16 @@
-# vue-formcontrol
 
-This template should help get you started developing with Vue 3 in Vite.
-
-## Recommended IDE Setup
-
-[VS Code](https://code.visualstudio.com/) + [Vue (Official)](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
-
-## Recommended Browser Setup
-
-- Chromium-based browsers (Chrome, Edge, Brave, etc.):
-  - [Vue.js devtools](https://chromewebstore.google.com/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd)
-  - [Turn on Custom Object Formatter in Chrome DevTools](http://bit.ly/object-formatters)
-- Firefox:
-  - [Vue.js devtools](https://addons.mozilla.org/en-US/firefox/addon/vue-js-devtools/)
-  - [Turn on Custom Object Formatter in Firefox DevTools](https://fxdx.dev/firefox-devtools-custom-object-formatters/)
-
-## Type Support for `.vue` Imports in TS
-
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vite.dev/config/).
-
-## Project Setup
-
-```sh
+# Vue3 用户数据表格CRUD实战项目
+## 技术栈
+Vue3 + Vite + TypeScript + <script setup> 组合式API
+## 项目功能
+1. 简易待办清单：ref响应式、v-model双向绑定、事件修饰符
+2. 用户管理表格完整CRUD：新增/编辑复用弹窗、前端搜索过滤、列表渲染
+## 本地启动教程
+1. 克隆仓库
+git clone https://github.com/Doss21254/Vue3-project.git
+2. 进入项目文件夹
+cd Vue3-project
+3. 安装依赖包
 npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
+4. 启动本地开发服务
 npm run dev
-```
-
-### Type-Check, Compile and Minify for Production
-
-```sh
-npm run build
-```
