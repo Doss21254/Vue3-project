@@ -1,18 +1,34 @@
-import { fileURLToPath, URL } from 'node:url'
-
 import { defineConfig } from 'vite'
+import { resolve } from 'path'
 import vue from '@vitejs/plugin-vue'
 import vueDevTools from 'vite-plugin-vue-devtools'
 
-// https://vite.dev/config/
 export default defineConfig({
-  plugins: [
-    vue(),
-    vueDevTools(),
-  ],
+  plugins: [vue(), vueDevTools()],
   resolve: {
     alias: {
-      '@': fileURLToPath(new URL('./src', import.meta.url))
-    },
+      '@': resolve(__dirname, 'src')
+    }
   },
+  server: {
+    port: 5173,
+    open: true,
+    host: '0.0.0.0'
+  },
+  build: {
+  outDir: 'dist',
+  chunkSizeWarningLimit: 1000,
+  rollupOptions: {
+    output: {
+      manualChunks(id) {
+        if (id.includes('vue') || id.includes('vue-router')) {
+          return 'vue-vendor'
+        }
+        if (id.includes('element-plus')) {
+          return 'element-vendor'
+        }
+      }
+    }
+  }
+}
 })
