@@ -1,16 +1,20 @@
-
-# Vue3 用户数据表格CRUD实战项目
+# Vue3 用户管理后台CRUD实战
 ## 技术栈
-Vue3 + Vite + TypeScript + <script setup> 组合式API
+Vite + Vue3 + TypeScript + <script setup>
+## Vite构建工具说明
+采用Vite新一代构建工具，对比Webpack启动速度大幅提升；
+打包阶段自动Tree-Shaking，剔除冗余代码，减小线上包体积。
+
 ## 项目功能
-1. 简易待办清单：ref响应式、v-model双向绑定、事件修饰符
-2. 用户管理表格完整CRUD：新增/编辑复用弹窗、前端搜索过滤、列表渲染
-## 本地启动教程
-1. 克隆仓库
+1. 表格渲染用户模拟数据
+2. 弹窗复用：新增/编辑用户共用弹窗组件
+3. computed计算属性实现关键词实时搜索过滤
+4. 删除单条数据、表单双向绑定基础校验
+## 本地运行教程
 git clone https://github.com/Doss21254/Vue3-project.git
-2. 进入项目文件夹
 cd Vue3-project
-3. 安装依赖包
 npm install
-4. 启动本地开发服务
+# 本地调试
 npm run dev
+# 打包上线
+npm run build
